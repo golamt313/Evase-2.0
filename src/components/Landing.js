@@ -3,43 +3,49 @@ import publicIp from 'public-ip';
 import fatguy from '../images/fet.gif';
 import firebase from '../firebase';
 import {v4 as uuidv4} from 'uuid';
+import Fade from 'react-reveal/Fade';
 
 function Landing() {
-    const [ip, setIp] = useState('');
+    const [clientIp, setClientIp] = useState('8.8.8.8');
+    const [details, setDetails] = useState(null);
+
+    const getuserGeolocationDetails = () => {
+        fetch("https://geolocation-db.com/json/8f12b5f0-2bc2-11eb-9444-076679b7aeb0")
+        .then( response => response.json())
+        .then( data => setDetails( data ));
+        console.log(details);
+    }
 
     (async () => {
-        setIp(await publicIp.v4());
+        setClientIp(await publicIp.v4());
       })();
-
-    function handleLog(ip) {
+      
+    function handleLog(clientIp) {
         const info = {
             id: uuidv4(),
-            number: ip
+            number: clientIp
         }
 
-        if (info.number != "") {
+        if (info.number !== "") {
         const db = firebase.firestore().collection("logger");
         db
-        .doc(info.id)
+        .doc(info.number)
         .set(info)
         .catch((err) => {
             console.log(err);
         });
-     }  
+      }
     };
 
-
     return(
-        <header className="App-header">
+        <header onLoad={getuserGeolocationDetails} className="App-header">
             <h1 className="logo">EVASE</h1>
-            <img src={fatguy} className="myClass amimate__animated animate__fadeIn" alt="logo"/>
-            <p className="title animate__animated animate__bounceIn">
-            Welcome to my site
-            </p>
-            <small className="small animate__animated animate__fadeInUp">
-            Mr Fot is running here  
-            </small>
-            <h3 onLoad={handleLog(ip)}>{ip}</h3>
+            <h3 onLoad={handleLog(clientIp)}>{clientIp}</h3>
+            {details && <ul className="details-list-container">
+                <li className="details-list-item">Location: { `${details.city}, ${details.country_name}(${details.state})` }</li>
+                <li className="details-list-item">Estimated Latitude: { `${details.latitude}` }</li>
+                <li className="details-list-item">Estimated Longitude: { `${details.longitude}` }</li>
+                </ul>}
         </header>
     )
 }

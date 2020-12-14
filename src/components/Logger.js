@@ -6,17 +6,14 @@ function Logger() {
     const ref = firebase.firestore().collection("logger");
 
     const [ips, setIps] = useState([]);
-    const [loading, setLoading] = useState(false);
 
     function getIPs() {
-        setLoading(true);
         ref.onSnapshot((querySnapshot) => {
             const items = [];
             querySnapshot.forEach((doc) => {
                 items.push(doc.data());
             });
             setIps(items);
-            setLoading(false);
         });
     }
 
