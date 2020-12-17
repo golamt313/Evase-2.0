@@ -1,0 +1,73 @@
+.navWrapper {
+    height: 90px;
+    width: 100%;
+    background-color: rgb(29, 29, 29);
+}
+.topnav {
+    display: inline-block;
+    width: 65%;
+  }
+  
+.topnav a {
+    float: right;
+    margin-top: 10px;
+}
+
+.topnav h1 {
+    float: left;
+    color: white;
+    margin-top: 10px;
+}
+
+.parent-nav-btns-wrapper {
+    list-style-type: none;
+}
+
+.parent-nav-btns-wrapper button{
+    padding: 15px 0 15px 0;
+    border: none;
+    background-color: rgb(29, 29, 29);
+    color: white;
+    font-size: 15px;
+    width: 100px;
+}
+
+#highelight button:hover {
+    color: rgb(29, 29, 29);
+}
+
+.parent-nav-btns-wrapper button:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(29, 29, 29);
+    transition: background .5s;
+    cursor: pointer;
+}
+
+.parent-nav-btns-wrapper #highlight button {
+    color: rgb(148, 113, 0);
+    border-bottom: 1px solid rgb(148, 113, 0);
+    font-weight: bold;
+}
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
+  }
+  
+  .copyLink {
+      margin-left: 45%;
+      width: 40px;
+  }
+
+  .copyLink h1 {
+      font-size: 20px;
+  }

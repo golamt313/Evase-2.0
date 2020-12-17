@@ -5,6 +5,7 @@ import Logger from './components/Logger';
 import publicIp from 'public-ip';
 import axios from 'axios';
 import Load from './components/Load';
+import Navigation from './components/Navigation';
 
 function App() {
   const url = 'https://jsonplaceholder.typicode.com/todos/1';
@@ -15,9 +16,10 @@ function App() {
     .then(res => {setState(res.data)})
   }, [url])
 
-  if(state) {
+  if(state) { 
     return (
       <div className="App">
+         <Navigation />
         <Landing />
         <Logger />
       </div>

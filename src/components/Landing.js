@@ -4,7 +4,8 @@ import fatguy from '../images/fet.gif';
 import firebase from '../firebase';
 import {v4 as uuidv4} from 'uuid';
 import Fade from 'react-reveal/Fade';
-
+import './styles/Landing.css';
+import paste from '../images/paste.png';
 function Landing() {
     const [clientIp, setClientIp] = useState('8.8.8.8');
     const [details, setDetails] = useState(null);
@@ -39,13 +40,19 @@ function Landing() {
 
     return(
         <header onLoad={getuserGeolocationDetails} className="App-header">
-            <h1 className="logo">EVASE</h1>
-            <h3 onLoad={handleLog(clientIp)}>{clientIp}</h3>
-            {details && <ul className="details-list-container">
-                <li className="details-list-item">Location: { `${details.city}, ${details.country_name}(${details.state})` }</li>
-                <li className="details-list-item">Estimated Latitude: { `${details.latitude}` }</li>
-                <li className="details-list-item">Estimated Longitude: { `${details.longitude}` }</li>
-                </ul>}
+            <div className="copyLink">
+                <h1>EVASE.NET</h1>
+                <img src={paste}></img>
+            </div>
+            
+            <div>
+                <h3 className="ip" onLoad={handleLog(clientIp)}>Your IP: {clientIp}</h3>
+                {details && <ul className="details-list-container">
+                    <li className="details-list-item">Location: { `${details.city}, ${details.country_name}(${details.state})` }</li>
+                    <li className="details-list-item">Estimated Latitude: { `${details.latitude}` }</li>
+                    <li className="details-list-item">Estimated Longitude: { `${details.longitude}` }</li>
+                    </ul>}
+            </div>
         </header>
     )
 }
