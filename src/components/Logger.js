@@ -24,11 +24,11 @@ function Logger() {
     return (
     // You can write HTML here
     <div>
-        {ips.map((ip) => (
+        {/* {ips.map((ip) => (
             <div className="ip-container">
                 <h2 id="ip-number">{ip.number}</h2>
             </div>
-        ))}
+        ))} */}
     </div>
 
     );
