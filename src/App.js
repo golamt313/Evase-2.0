@@ -6,6 +6,7 @@ import publicIp from 'public-ip';
 import axios from 'axios';
 import Load from './components/Load';
 import Navigation from './components/Navigation';
+import BottomFooter from './components/BottomFooter';
 
 function App() {
   const url = 'https://jsonplaceholder.typicode.com/todos/1';
@@ -22,6 +23,7 @@ function App() {
          <Navigation />
         <Landing />
         <Logger />
+        <BottomFooter />
       </div>
     );
   }

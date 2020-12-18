@@ -1,0 +1,15 @@
+.bottom-footer-wrapper {
+    background-color: rgb(51, 1, 61);
+    color: white;
+}
+
+.copyRight {
+    padding: 5px 0 8px 0;
+    margin: 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(43, 43, 43, 0.5);
+}

@@ -2,6 +2,7 @@
     height: 10vh;
     width: 100%;
     background-color: rgb(29, 29, 29);
+    user-select: none;
 }
 .topnav {
     display: inline-block;
@@ -17,6 +18,8 @@
     float: left;
     color: white;
     margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
 .parent-nav-btns-wrapper {
@@ -30,6 +33,7 @@
     color: white;
     font-size: 15px;
     width: 100px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #highelight button:hover {
