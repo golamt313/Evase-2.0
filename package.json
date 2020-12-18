@@ -1,5 +1,5 @@
 {
-  "name": "ip-logger",
+  "name": "evase",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,6 +10,7 @@
     "detect-client-ip": "^1.0.3",
     "firebase": "^8.2.0",
     "firebase-tools": "^8.19.0",
+    "public-ip": "^4.0.3",
     "react-dom": "^17.0.1",
     "react-reveal": "^1.2.2",
     "react-scripts": "4.0.1",
