@@ -61,13 +61,13 @@ function Landing() {
 
     return(
         <div className="landing-wrapper">
-            <div onClick={copyToClipboard} className="copy-link-wrapper">
+            <div onClick={copyToClipboard} className="copy-link-wrapper animate__animated animate__fadeIn">
                 <h1>EVASE.NET</h1>
                 <img src={paste}></img>
             </div>
             {copied ? <h2 className="animate__animated animate__fadeOutUp animate__delay-2s">Copied!</h2> : null}
-                <h1 className="welcomeTo">WELCOME TO EVASE</h1>
-            <div className="welcome-container">
+                <h1 className="welcomeTo animate__animated animate__fadeInUp">WELCOME TO EVASE</h1>
+            <div className="welcome-container animate__animated animate__fadeInUp">
                 <div class="typeWrite">    
                     <Typewriter
                         options={{
@@ -79,7 +79,7 @@ function Landing() {
                         }}
                     />
                 </div>
-                <p className="ideas">Ideas</p>
+                <p className="ideas">Skills</p>
             </div>
         </div>
     )
