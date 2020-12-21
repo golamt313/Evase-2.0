@@ -1,7 +1,7 @@
 @import '~bootstrap/scss/bootstrap.scss';
 
 .navWrapper {
-    height: 10vh;
+    height: 90px;
     width: 100%;
     background-color: #1d1d1d;
     user-select: none;
@@ -130,7 +130,7 @@
   
   @keyframes glitch {
     1%{
-      transform: rotateX(10deg) skewX(90deg);
+      transform: rotateX(10deg) skewX(10deg);
     }
     2%{
       transform: rotateX(0deg) skewX(0deg);

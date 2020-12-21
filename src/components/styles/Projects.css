@@ -5,16 +5,15 @@
 }
 
 #projects-wrapper {
-    height: 320vh;
+    height: 2533px;
+    position: absolute;
     width: 100%;
     background-image: linear-gradient(rgb(32, 2, 36), rgb(156, 17, 17));
 }
 
 #projects-container {
     position: absolute;
-    margin-left: 15%;
-    width: 70%;
-    height: 100vh;
+    width: 100%;
 }
 
 .project-container:hover {
@@ -23,10 +22,14 @@
 }
 
 .project-block {
-    margin-top: 5vw;
-    height: 40vh;
+    margin-top: 50px;
+    height: 450px;
     background-color: white;
     transition: all .2s ease-in-out; 
+    cursor: default;
+    user-select: none;
+    width: 70%;
+    margin-left: 15%;
 }
 
 .placeholder {
@@ -34,4 +37,103 @@
     height: 100%;
     object-fit: cover;
     float: left;
+}
+
+.learn-more {
+    margin-top: 350px;
+    height: 100px;
+    position: absolute;
+    z-index: 10;
+    width: 70%;
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(141, 141, 141));
+}
+
+.learn-more:hover {
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(88, 88, 88));
+    cursor: pointer;
+}
+
+.learn-more p {
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color:rgb(32, 2, 36)
+}
+
+.data-privacy-image {
+    background-image: url(../../images/whiteterminal.png);
+    top: 50px;
+    left: 50px;
+    width: 85%;
+    height: 330px;
+    position: absolute;
+    border: 1px solid rgb(214, 214, 214);
+}
+
+.left-teaser-1 {
+    float: left;
+    width: 50%;
+    z-index: 11;
+    position: relative;
+}
+
+.left-teaser-1 h3 {
+    margin-top: 80px;
+    font-size: 2.2vw;
+    float: left;
+}
+
+.details-list-container {
+    margin: 0 0 0 50px;
+    padding: 0;
+}
+
+.details-list-item {
+    font-size: 1.1vw;
+    line-height: 35px;
+    list-style-type: none;
+    text-align: left;
+    float: left;
+    width: 100%;
+}
+
+.right-teaser-1 {
+    float: right;
+    width: 50%;
+    z-index: 11;
+    position: relative;
+}
+
+.right-teaser-1 h3 {
+    margin: 20px 0 20px 0;
+}
+
+.right-teaser-1 small {
+    height: 335px;
+    width: 70%;
+    display: inline-block;
+    font-size: 1vw;
+    line-height: 30px;
+    text-align: justify;
+    overflow-y: hidden;
+}
+
+.development-image {
+    margin: 60px 0 0 0;
+    width: 30vw;
+    height: 320px;
+}
+
+
+
+
+
+
+
+
+.icons-wrapper {
+    margin-top: 100px;
+    width: 100%;
+    height: 300px;
+    background-color: white;
 }

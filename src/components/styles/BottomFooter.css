@@ -1,6 +1,7 @@
 .bottom-footer-wrapper {
     background-color: rgb(51, 1, 61);
     color: white;
+    position: fixed;
 }
 
 .copyRight {
