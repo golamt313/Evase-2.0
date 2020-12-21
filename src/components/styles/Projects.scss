@@ -1,3 +1,5 @@
+@import '~bootstrap/scss/bootstrap.scss';
+
 #projects-title {
     text-align: center;
     margin-top: 5vh;
@@ -137,3 +139,40 @@
     height: 300px;
     background-color: white;
 }
+
+
+
+
+
+.carouselWrapper {
+    position: relative;
+  }
+  
+  .carouselContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    scrollbar-width: 0;
+    scrollbar-color: transparent transparent;
+    -ms-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
+  
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  
+    .carouselItem {
+      flex-grow: 0;
+      flex-shrink: 0;
+      width: 25%;
+      scroll-snap-align: center;
+    }
+
+    .carouselItem img {
+        height: 200px;
+        width: 200px;
+        object-fit: cover;
+    }
+  }
+  

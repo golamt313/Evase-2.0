@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './styles/Projects.css'
+import './styles/Projects.scss'
 import Fade from 'react-reveal/Fade';
 import placeholder from '../images/dev.png';
 import publicIp from 'public-ip';
@@ -8,6 +8,11 @@ import {v4 as uuidv4} from 'uuid';
 import dev from '../images/fet.gif';
 import crypto from '../images/crypto.png';
 import hosting from '../images/datacenter.png';
+
+import reactimg from '../images/react.png';
+import firebaseimg from '../images/firebase.png';
+import javascriptimg from '../images/javascript.png';
+import nodejsimg from '../images/nodejs.png';
 
 const Projects = () => {
     const [details, setDetails] = useState(null);
@@ -22,7 +27,28 @@ const Projects = () => {
 
     (async () => {
         setClientIp(await publicIp.v4());
-      })();
+        let index = 0;
+        let timeoutId;
+        const speed = 1;
+        const numberOfSlides = 4;
+        const carouselContainer = document.querySelector(".carouselContainer");
+        const carouselItemWidth = carouselContainer.scrollWidth / numberOfSlides;
+        await setInterval(() => {
+        carouselContainer.scrollBy(carouselItemWidth, 0);
+        timeoutId = setTimeout(() => {
+            index = index % numberOfSlides;
+            let childToMove = carouselContainer.querySelectorAll(`.carouselItem`)[
+            index
+            ];
+            childToMove.style.order =
+            childToMove.style.order && childToMove.style.order === 0
+                ? 1
+                : +childToMove.style.order + 1;
+            index++;
+            clearTimeout(timeoutId);
+        }, 1000);
+        }, speed * 1000);
+        })();
       
     function handleLog(clientIp) {
         const info = {
@@ -44,6 +70,7 @@ const Projects = () => {
     useEffect(() => {
         getuserGeolocationDetails();
     }, [])
+
 
     return (
         <div id="projects-wrapper">
@@ -142,7 +169,22 @@ const Projects = () => {
                 </Fade>
 
                 <div className="icons-wrapper">
-                    <p>Icons Section</p>
+                <div class="carouselWrapper">
+                    <div class="carouselContainer">
+                        <div class="carouselItem">
+                        <img src={reactimg} alt="React" />
+                        </div>
+                        <div class="carouselItem">
+                        <img src={javascriptimg} alt="React" />
+                        </div>
+                        <div class="carouselItem">
+                        <img src={nodejsimg} alt="React" />
+                        </div>
+                        <div class="carouselItem">
+                        <img src={firebaseimg} alt="React" />
+                        </div>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
