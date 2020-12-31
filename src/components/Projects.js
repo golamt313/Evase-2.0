@@ -8,6 +8,7 @@ import {v4 as uuidv4} from 'uuid';
 import dev from '../images/fet.gif';
 import crypto from '../images/crypto.png';
 import hosting from '../images/datacenter.png';
+import { Carousel } from 'react-bootstrap';
 
 import reactimg from '../images/react.png';
 import firebaseimg from '../images/firebase.png';
@@ -27,27 +28,6 @@ const Projects = () => {
 
     (async () => {
         setClientIp(await publicIp.v4());
-        let index = 0;
-        let timeoutId;
-        const speed = 1;
-        const numberOfSlides = 4;
-        const carouselContainer = document.querySelector(".carouselContainer");
-        const carouselItemWidth = carouselContainer.scrollWidth / numberOfSlides;
-        await setInterval(() => {
-        carouselContainer.scrollBy(carouselItemWidth, 0);
-        timeoutId = setTimeout(() => {
-            index = index % numberOfSlides;
-            let childToMove = carouselContainer.querySelectorAll(`.carouselItem`)[
-            index
-            ];
-            childToMove.style.order =
-            childToMove.style.order && childToMove.style.order === 0
-                ? 1
-                : +childToMove.style.order + 1;
-            index++;
-            clearTimeout(timeoutId);
-        }, 1000);
-        }, speed * 1000);
         })();
       
     function handleLog(clientIp) {
@@ -167,29 +147,42 @@ const Projects = () => {
                             <div className="learn-more"><p>Learn more</p></div>    
                     </div>
                 </Fade>
-
-                <div className="icons-wrapper">
-                <div class="carouselWrapper">
-                    <div class="carouselContainer">
-                        <div class="carouselItem">
-                        <img src={reactimg} alt="React" />
-                        </div>
-                        <div class="carouselItem">
-                        <img src={javascriptimg} alt="React" />
-                        </div>
-                        <div class="carouselItem">
-                        <img src={nodejsimg} alt="React" />
-                        </div>
-                        <div class="carouselItem">
-                        <img src={firebaseimg} alt="React" />
-                        </div>
-                    </div>
-                    </div>
-                </div>
+                    
+                {/* <Carousel>
+                    <Carousel.Item interval={1000} controls="false">
+                        <img
+                        className="d-block w-100 carousel-item-width"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/768px-React-icon.svg.png"
+                        alt="First slide"
+                        />
+                    </Carousel.Item>
+                    <Carousel.Item interval={1000} controls="false">
+                        <img
+                        className="d-block w-100 carousel-item-width"
+                        src="https://www.vhv.rs/dpng/d/313-3133777_javascript-transparent-background-svg-hd-png-download.png"
+                        alt="Second slide"
+                        />
+                    </Carousel.Item>
+                    <Carousel.Item interval={1000} controls="false">
+                        <img
+                        className="d-block w-100 carousel-item-width"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1280px-Node.js_logo.svg.png"
+                        alt="Third slide"
+                        />
+                    </Carousel.Item>
+                    <Carousel.Item interval={1000} controls="false">
+                        <img
+                        className="d-block w-100 carousel-item-width"
+                        src="https://firebase.google.com/downloads/brand-guidelines/PNG/logo-standard.png"
+                        alt="Third slide"
+                        />
+                    </Carousel.Item>
+                </Carousel> */}
+                
             </div>
         </div>
     );
-
+    
 };
 
 export default Projects;
