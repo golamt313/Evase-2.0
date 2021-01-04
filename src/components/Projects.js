@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './styles/Projects.scss'
 import Fade from 'react-reveal/Fade';
-import placeholder from '../images/dev.png';
 import publicIp from 'public-ip';
 import firebase from '../firebase';
 import {v4 as uuidv4} from 'uuid';
@@ -59,7 +58,8 @@ const Projects = () => {
                     <h1 id="projects-title">EXPLORE CATEGORIES</h1>
                 </Fade>
                 <Fade left>
-                    <div className="project-block">
+                <div className="project-block-wrapper">
+                    <div className="project-block-left">
                         <div>
                             <div className="left-teaser-1">
                                 <div className="data-privacy-image">
@@ -88,12 +88,14 @@ const Projects = () => {
 
                                 </small>
                             </div>
-                            <div className="learn-more"><p>Learn more</p></div>
+                    </div>
+                    <div className="learn-more-left"><p>Learn more</p></div>
                     </div>
                 </Fade>
 
-                <Fade left>
-                    <div className="project-block">
+                <Fade right>
+                <div className="project-block-wrapper">
+                    <div className="project-block-right">
                         <div className="left-teaser-1">
                             <img className="development-image" src={dev}></img>
                         </div>
@@ -106,12 +108,14 @@ const Projects = () => {
                                 browser. 
                             </small>    
                         </div>
-                        <div className="learn-more"><p>Learn more</p></div>
+                    </div>
+                    <div className="learn-more-right"><p>Learn more</p></div>
                     </div>
                 </Fade>
 
                 <Fade left>
-                    <div className="project-block">
+                <div className="project-block-wrapper">
+                    <div className="project-block-left">
                         <div className="left-teaser-1">
                             <img className="development-image" src={crypto}></img>
                         </div>
@@ -124,28 +128,31 @@ const Projects = () => {
                                 dont have a physical form such as paper money and is not typically issued by central authority.
                                 You can also <b>create</b> your own Crypto Currency..!            
                             </small>
-                               </div>
-                            <div className="learn-more"><p>Learn more</p></div>    
+                               </div>    
+                    </div>
+                    <div className="learn-more-left"><p>Learn more</p></div>
                     </div>
                 </Fade>
 
-                <Fade left>
-                <div className="project-block">
-                        <div className="left-teaser-1">
-                            <img className="development-image" src={hosting}></img>
+                <Fade right>
+                <div className="project-block-wrapper">
+                    <div className="project-block-right">
+                            <div className="left-teaser-1">
+                                <img className="development-image" src={hosting}></img>
+                            </div>
+                            <div className="right-teaser-1">
+                                <h3><u>Hosting</u></h3>
+                                <small>Hosting is to store data or a website onto a server or computer so that it can be 
+                                    accessed over the internet. Usually and mainly Datacenters host and operate IT operations and
+                                    have a variety of equipement for the purposes of storing, processing and dissemating data and
+                                    applications. Datacenters are vital to the continuity of daily operations and have multiple
+                                    computers that function for its own unique purpose. From this we can host Websites, Game servers
+                                    Cloud Hosting and Virtual Servers.
+                                </small>
+                                </div>    
                         </div>
-                        <div className="right-teaser-1">
-                            <h3><u>Hosting</u></h3>
-                            <small>Hosting is to store data or a website onto a server or computer so that it can be 
-                                accessed over the internet. Usually and mainly Datacenters host and operate IT operations and
-                                have a variety of equipement for the purposes of storing, processing and dissemating data and
-                                applications. Datacenters are vital to the continuity of daily operations and have multiple
-                                computers that function for its own unique purpose. From this we can host Websites, Game servers
-                                Cloud Hosting and Virtual Servers.
-                            </small>
-                               </div>
-                            <div className="learn-more"><p>Learn more</p></div>    
-                    </div>
+                        <div className="learn-more-right"><p>Learn more</p></div>
+                </div>
                 </Fade>
                     
                 {/* <Carousel>

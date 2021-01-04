@@ -78,7 +78,7 @@ function Navigation() {
                       />
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#blog" bsPrefix="nav-flat" variant="flat">BLOG</Nav.Link>
+            <Nav.Link href="#forums" bsPrefix="nav-flat" variant="flat">FORUMS</Nav.Link>
             <Nav.Link href="#contact" bsPrefix="nav-flat" variant="flat">CONTACT</Nav.Link>
           </Nav>
         </Navbar.Collapse>

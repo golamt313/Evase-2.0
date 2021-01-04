@@ -3,15 +3,15 @@
 #projects-title {
     text-align: center;
     margin-top: 5vh;
-    color: white;
+    color: rgb(44, 44, 44);
 }
 
 #projects-wrapper {
-    height: 2533px;
-    position: absolute;
+    height: 2700px;
     width: 100%;
-    background-image: linear-gradient(rgb(32, 2, 36), rgb(156, 17, 17));
+    background: rgba(204, 42, 212, 0.37);
 }
+
 
 #projects-container {
     position: absolute;
@@ -23,15 +23,28 @@
     transform: scale(1.1);
 }
 
-.project-block {
-    margin-top: 50px;
+.project-block-left {
+    margin-top: 150px;
     height: 450px;
-    background-color: white;
     transition: all .2s ease-in-out; 
     cursor: default;
     user-select: none;
     width: 70%;
     margin-left: 15%;
+    border: 1px solid rgb(48, 3, 48);
+    background-color: white;
+}
+
+.project-block-right {
+    margin-top: 150px;
+    height: 450px;
+    transition: all .2s ease-in-out; 
+    cursor: default;
+    user-select: none;
+    width: 70%;
+    margin-left: 15%;
+    border: 1px solid rgb(48, 3, 48);
+    background-color: white;
 }
 
 .placeholder {
@@ -41,16 +54,30 @@
     float: left;
 }
 
-.learn-more {
-    margin-top: 350px;
+.learn-more-left {
     height: 100px;
     position: absolute;
     z-index: 10;
     width: 70%;
+    margin-left: 15%;
+    background-image: linear-gradient(rgb(199, 199, 199), rgb(141, 141, 141));
+}
+
+.learn-more-left:hover {
+    background-image: linear-gradient(rgb(199, 199, 199), rgb(88, 88, 88));
+    cursor: pointer;
+}
+
+.learn-more-right {
+    height: 100px;
+    position: absolute;
+    z-index: 10;
+    width: 70%;
+    margin-left: 15%;
     background-image: linear-gradient(rgb(255, 255, 255), rgb(141, 141, 141));
 }
 
-.learn-more:hover {
+.learn-more-right:hover {
     background-image: linear-gradient(rgb(255, 255, 255), rgb(88, 88, 88));
     cursor: pointer;
 }

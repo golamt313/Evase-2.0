@@ -26,14 +26,12 @@
   padding: 15px 0 15px 0;
   font-size: 15px;
   width: 100px;
-  font-family: 'Montserrat', sans-serif;
   text-decoration: none;
 }
 
-.nav-hightlight:hover {
-    color: white;
-    cursor: pointer;
+.nav-highlight:hover {
     text-decoration: none;
+    color: rgb(224, 34, 224);
 }
 
 .dropdown-toggle.nav-flat {
@@ -74,13 +72,12 @@ a.dropdown-item:hover{
     padding: 15px 0 15px 0;
     font-size: 15px;
     width: 100px;
-    font-family: 'Montserrat', sans-serif;
     text-decoration: none;
   }
 
   .nav-flat:hover {
     text-decoration: none;
-    color: rgb(236, 78, 236);
+    color: rgb(224, 34, 224);
   }
 
   #basic-nav-dropdown {

@@ -8,6 +8,7 @@ import Load from './components/Load';
 import Navigation from './components/Navigation';
 import BottomFooter from './components/BottomFooter';
 import Projects from './components/Projects';
+import Courses from './components/Courses';
 
 function App() {
   const url = 'https://jsonplaceholder.typicode.com/todos/1';
@@ -25,6 +26,7 @@ function App() {
         <Landing />
         <Logger />
         <Projects />
+        <Courses />
         <BottomFooter />
       </div>
     );
