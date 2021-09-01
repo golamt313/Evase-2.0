@@ -16,7 +16,7 @@ function Navigation() {
 
   return (
       
-      <Navbar className="navWrapper">
+      <Navbar fixed="top" className="navWrapper">
         <Navbar.Brand className="container animate__animated animate__fadeInDown"><h1 class="glitch" data-text="EVASE">EVASE</h1></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

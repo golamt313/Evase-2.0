@@ -25,7 +25,7 @@ function App() {
          <Navigation />
         <Landing />
         <Logger />
-        <Projects />
+        {/* <Projects /> */}
         <Courses />
         <BottomFooter />
       </div>

@@ -3,13 +3,13 @@
 #projects-title {
     text-align: center;
     margin-top: 5vh;
-    color: rgb(44, 44, 44);
+    color: white;
 }
 
 #projects-wrapper {
     height: 2700px;
     width: 100%;
-    background: rgba(204, 42, 212, 0.37);
+    background: rgba(103, 15, 107, 0.555);
 }
 
 
@@ -31,7 +31,6 @@
     user-select: none;
     width: 70%;
     margin-left: 15%;
-    border: 1px solid rgb(48, 3, 48);
     background-color: white;
 }
 
@@ -43,7 +42,6 @@
     user-select: none;
     width: 70%;
     margin-left: 15%;
-    border: 1px solid rgb(48, 3, 48);
     background-color: white;
 }
 
@@ -60,11 +58,11 @@
     z-index: 10;
     width: 70%;
     margin-left: 15%;
-    background-image: linear-gradient(rgb(199, 199, 199), rgb(141, 141, 141));
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(235, 235, 235));
 }
 
 .learn-more-left:hover {
-    background-image: linear-gradient(rgb(199, 199, 199), rgb(88, 88, 88));
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(88, 88, 88));
     cursor: pointer;
 }
 
@@ -74,7 +72,7 @@
     z-index: 10;
     width: 70%;
     margin-left: 15%;
-    background-image: linear-gradient(rgb(255, 255, 255), rgb(141, 141, 141));
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(235, 235, 235));
 }
 
 .learn-more-right:hover {

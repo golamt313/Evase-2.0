@@ -65,7 +65,7 @@ function Landing() {
                 <h1>EVASE.NET</h1>
                 <img src={paste}></img>
             </div>
-            {copied ? <h2 className="animate__animated animate__fadeOutUp animate__delay-2s">Copied!</h2> : null}
+            {copied ? <h2 className="copied animate__animated animate__fadeOutUp animate__delay-2s">COPIED!</h2> : null}
                 <h1 className="welcomeTo animate__animated animate__fadeInUp">WELCOME TO EVASE</h1>
             <div className="welcome-container animate__animated animate__fadeInUp">
                 <div class="typeWrite">    
